@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rancho Pizzeria · Wood-Fired Pizza in Coleman, Texas</title>
+<meta name="description" content="Stone oven pizza, starters and plates on S Commercial Ave in Coleman, TX. Dine-in, takeout and delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF6EE;--ink:#1E1512;--muted:#6B5A52;--card:#FFFFFF;--red:#C8281E;--green:#2F6B3F;--gold:#F2A93B;--char:#1E1512;--line:#1E1512;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171110;--ink:#FBF1E6;--muted:#BFAEA3;--card:#251C1A;--line:#FBF1E6}}
+:root[data-theme="dark"]{--bg:#171110;--ink:#FBF1E6;--muted:#BFAEA3;--card:#251C1A;--line:#FBF1E6}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--char);color:#FBF1E6}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:"Alfa Slab One";font-size:1.3rem;text-decoration:none;color:#FBF1E6}
+.logo i{color:var(--gold);font-style:normal}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-weight:500}
+nav ul a{text-decoration:none;color:#FBF1E6}
+nav ul a:hover{color:var(--gold)}
+@media(max-width:700px){nav ul{display:none}}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;text-decoration:none;padding:13px 24px;border-radius:8px;border:2px solid var(--red);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-3px);background:#a81f16}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{background:var(--char);color:#FBF1E6;position:relative;overflow:hidden;padding:70px 0 90px}
+.hero::before{content:"";position:absolute;inset:0;opacity:.07;background:repeating-linear-gradient(0deg,#fff 0 28px,transparent 28px 56px),repeating-linear-gradient(90deg,#fff 0 28px,transparent 28px 56px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem)}
+.hero h1 span{display:block;color:var(--gold)}
+.hero p.lead{font-size:1.2rem;max-width:30rem;margin:22px 0 28px;color:#E6D5C8}
+.hero .btn.ghost{color:#FBF1E6;border-color:#FBF1E6}
+.hero .btn.ghost:hover{background:#FBF1E6;color:var(--char)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;font-weight:500;font-size:.95rem}
+.facts span{border:1px solid rgba(251,241,230,.4);padding:4px 14px;border-radius:99px}
+
+/* pizza */
+.oven{position:relative;display:grid;place-items:center}
+.oven::before{content:"";position:absolute;width:115%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(242,169,59,.55),rgba(200,40,30,.25) 45%,transparent 68%);animation:ember 3s ease-in-out infinite}
+@keyframes ember{50%{transform:scale(1.08);opacity:.8}}
+.pizza{position:relative;width:min(88vw,430px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#F6C95C 0 40%,#E8A63B 62%,#C9822A 70%);box-shadow:0 0 0 14px #B9742A,0 0 0 18px #8A5220,0 30px 60px rgba(0,0,0,.5);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pizza::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 11.4%,rgba(30,21,18,.35) 11.4% 11.9%,transparent 11.9% 24.3%,rgba(30,21,18,.35) 24.3% 24.8%,transparent 24.8% 37.2%,rgba(30,21,18,.35) 37.2% 37.7%,transparent 37.7% 50.1%,rgba(30,21,18,.35) 50.1% 50.6%,transparent 50.6% 62.9%,rgba(30,21,18,.35) 62.9% 63.4%,transparent 63.4% 75.8%,rgba(30,21,18,.35) 75.8% 76.3%,transparent 76.3% 88.7%,rgba(30,21,18,.35) 88.7% 89.2%,transparent 89.2%)}
+.top{position:absolute;border-radius:50%;cursor:pointer;animation:fall .8s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--d)*110ms + 300ms);z-index:2}
+.top.pep{width:15%;height:15%;background:radial-gradient(circle at 35% 30%,#E0442F,#A31D14);box-shadow:inset 0 0 0 3px rgba(0,0,0,.12)}
+.top.bas{width:11%;height:6%;background:var(--green);border-radius:80% 0 80% 0}
+.top.jal{width:8%;height:8%;background:#7FBF4D;border:3px solid #4C8A2B}
+@keyframes fall{from{transform:translateY(-130%) scale(1.6);opacity:0}to{opacity:1}}
+.top:hover{filter:brightness(1.3)}
+.hint{margin-top:34px;font-size:.85rem;color:#BFAEA3;text-align:center;width:100%}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.oven{margin-top:20px}}
+
+/* gingham divider */
+.gingham{height:34px;background:conic-gradient(var(--red) 25%,#fff 0 50%,var(--red) 0 75%,#fff 0) 0 0/34px 34px;border-block:2px solid var(--char)}
+
+section{padding:84px 0}
+h2{font-size:clamp(2rem,5vw,3.1rem);margin-bottom:12px}
+.sub{color:var(--muted);max-width:36rem;margin:0 0 30px}
+
+/* menu */
+.tabs{display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.tab{font:inherit;font-weight:700;padding:10px 22px;border-radius:99px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.panel{display:none;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.panel.on{display:grid}
+.item{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;position:relative;opacity:0;transform:translateY(14px);animation:in .45s forwards;animation-delay:calc(var(--n)*60ms)}
+@keyframes in{to{opacity:1;transform:none}}
+.item h3{font-size:1.25rem;margin-bottom:6px}
+.item p{margin:0;color:var(--muted);font-size:.95rem}
+.fav{position:absolute;top:-12px;right:14px;background:var(--gold);color:#1E1512;font-weight:700;font-size:.8rem;padding:2px 12px;border-radius:99px;border:2px solid #1E1512}
+.note{margin-top:24px;color:var(--muted);font-size:.95rem}
+
+/* love */
+.love{background:var(--green);color:#fff}
+.love .grid{display:grid;grid-template-columns:1fr 1.5fr;gap:44px;align-items:center}
+.score{font-family:"Alfa Slab One";font-size:clamp(5rem,15vw,8.5rem);line-height:1}
+.stars{color:var(--gold);font-size:1.5rem;letter-spacing:4px}
+.love p{margin:8px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tags span{border:2px solid #fff;border-radius:99px;padding:4px 14px;font-weight:500;font-size:.9rem}
+@media(max-width:760px){.love .grid{grid-template-columns:1fr}}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.q{margin:0;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:24px;box-shadow:6px 6px 0 var(--red)}
+.q blockquote{margin:0 0 12px;font-size:1.05rem}
+.q b{display:block}.q small{color:var(--muted)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:30px}
+.card dl{margin:0;display:grid;gap:16px}
+.card dt{font-weight:700}
+.card dd{margin:0;color:var(--muted)}
+.card dd a{color:var(--ink);font-weight:700}
+.go{background:var(--red);color:#fff;border-color:var(--red);display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.go h3{font-size:2rem}
+.go p{margin:0}
+.go .btn{background:#fff;color:var(--red);border-color:#fff;align-self:flex-start}
+.go .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.way{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+
+footer{background:var(--char);color:#BFAEA3;padding:28px 0 36px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:#FBF1E6}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.item{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Rancho <i>Pizzeria</i></a>
+    <ul><li><a href="#menu">Menu</a></li><li><a href="#love">Reviews</a></li><li><a href="#visit">Visit</a></li></ul>
+    <a class="btn" href="tel:+13256251770" style="padding:8px 16px">Call to order</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Stone oven pizza<span>in Coleman, Texas</span></h1>
+      <p class="lead">Wood-fired pies with unusual, flavorful toppings, plus starters and plates worth the stop. On S Commercial Ave.</p>
+      <div class="cta">
+        <a class="btn" href="tel:+13256251770">Call 325-625-1770</a>
+        <a class="btn ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="facts"><span>Dine-in</span><span>Takeout</span><span>Delivery</span><span>$10–30 per person</span></div>
+    </div>
+    <div class="oven">
+      <div class="pizza" id="pizza" role="img" aria-label="A wood-fired pizza with pepperoni, basil and jalapeño"></div>
+      <div class="hint">Tap a topping</div>
+    </div>
+  </div>
+</header>
+<div class="gingham" aria-hidden="true"></div>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>From the oven</h2>
+    <p class="sub">A look at what we serve. Ask the team about today's specials.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-p="pz">Pizzas</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="st">Starters &amp; plates</button>
+    </div>
+    <div class="panel on" id="pz">
+      <div class="item" style="--n:0"><span class="fav">Popular</span><h3>Carne Pizza</h3><p>A hearty, meaty favorite from our stone oven.</p></div>
+      <div class="item" style="--n:1"><span class="fav">Popular</span><h3>Pepperoni Pizza</h3><p>The classic, done right.</p></div>
+      <div class="item" style="--n:2"><span class="fav">Popular</span><h3>Margarita Pizza</h3><p>Simple, fresh and wood-fired.</p></div>
+      <div class="item" style="--n:3"><span class="fav">Popular</span><h3>Fungi Pizza</h3><p>A mushroom pie regulars keep coming back for.</p></div>
+      <div class="item" style="--n:4"><h3>Jalapeño Popper Pizza</h3><p>All the flavor of the appetizer, on a pizza.</p></div>
+    </div>
+    <div class="panel" id="st">
+      <div class="item" style="--n:0"><h3>Spinach Artichoke Dip</h3><p>Warm, creamy and made for sharing.</p></div>
+      <div class="item" style="--n:1"><h3>Caesar Salad</h3><p>A crisp start to the meal.</p></div>
+      <div class="item" style="--n:2"><h3>Seared Crab Cake</h3><p>Pan-seared and rich.</p></div>
+      <div class="item" style="--n:3"><h3>Beef Guinness Pot Pie</h3><p>Slow, savory comfort in a crust.</p></div>
+      <div class="item" style="--n:4"><h3>Wood Fired Quail</h3><p>From the same fire as the pizzas.</p></div>
+      <div class="item" style="--n:5"><h3>Toast</h3><p>Simple and satisfying.</p></div>
+    </div>
+    <p class="note">Guests also rave about the stuffed peppers, meatballs, arugula pizza and cauliflower crust. Menu items and prices may change; see the full menu at <a href="https://ranchopizzeria.com" target="_blank" rel="noopener">ranchopizzeria.com</a>.</p>
+  </div>
+</section>
+
+<div class="love" id="love">
+  <section style="padding:70px 0">
+    <div class="wrap grid">
+      <div>
+        <div class="score" id="score">4.6</div>
+        <div class="stars" aria-label="4.6 out of 5 stars">★★★★★</div>
+        <p>from 445 Google reviews</p>
+      </div>
+      <div>
+        <h2>Authentic pizza. Warm service.</h2>
+        <p>Diners love the stone oven pizza, the quality ingredients, lunch-friendly portions and attentive, friendly staff.</p>
+        <div class="tags"><span>Wood fired</span><span>Jalapeño popper pizza</span><span>Arugula pizza</span><span>Cauliflower crust</span><span>LGBTQ+ friendly</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>What regulars say</h2>
+    <p class="sub">Real reviews from our Google page.</p>
+    <div class="quotes">
+      <figure class="q"><blockquote>“We always stop by when we're in Coleman. Our favorite pizzas are fungi and pepperoni. The service is always caring and consistent.”</blockquote><b>Paula H.</b><small>Local Guide</small></figure>
+      <figure class="q"><blockquote>“Delicious authentic stone oven pizza. Great atmosphere and very awesome service.”</blockquote><b>Wade G.</b><small>Local Guide</small></figure>
+      <figure class="q"><blockquote>“Really high quality pizza, and really good tea, with good service that's been very attentive.”</blockquote><b>Jake</b><small>Local Guide</small></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <h2>Come hungry</h2>
+    <p class="sub">Find us downtown, or order ahead for takeout.</p>
+    <div class="visit">
+      <div class="card">
+        <dl>
+          <div><dt>Address</dt><dd>414 S Commercial Ave<br>Coleman, TX 76834</dd></div>
+          <div><dt>Hours</dt><dd>Closed Mondays. Opens at 11 AM on Thursdays. Call for other days.</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13256251770">+1 325-625-1770</a></dd></div>
+          <div><dt>Ways to eat</dt><dd>Dine-in, takeout and delivery</dd></div>
+        </dl>
+      </div>
+      <div class="card go">
+        <h3>Hungry for wood-fired?</h3>
+        <p>Call ahead for takeout or grab a table.</p>
+        <div class="way">
+          <a class="btn" href="tel:+13256251770">Call now</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=414+S+Commercial+Ave+Coleman+TX+76834" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr">2026</span> Rancho Pizzeria</span><span>414 S Commercial Ave, Coleman, TX · <a href="https://ranchopizzeria.com" target="_blank" rel="noopener">ranchopizzeria.com</a></span></div>
+</footer>
+
+<script>
+(function(){
+  var p=document.getElementById("pizza");
+  // [type, left%, top%] (center of topping)
+  var t=[["pep",50,22],["pep",72,34],["pep",74,60],["pep",54,78],["pep",30,66],["pep",26,38],["pep",50,50],
+         ["bas",40,35],["bas",62,48],["bas",42,60],["bas",60,66],["bas",38,48],
+         ["jal",62,24],["jal",80,48],["jal",36,78],["jal",22,54],["jal",46,36]];
+  t.forEach(function(a,i){
+    var d=document.createElement("div");d.className="top "+a[0];
+    d.style.left=a[1]+"%";d.style.top=a[2]+"%";d.style.marginLeft="-6%";d.style.marginTop="-6%";
+    d.style.setProperty("--d",i);
+    if(a[0]==="bas")d.style.transform="rotate("+(i*37)+"deg)";
+    d.addEventListener("click",function(){d.style.transition="transform .3s,opacity .3s";d.style.transform+=" scale(0)";d.style.opacity=0;
+      setTimeout(function(){d.style.transform=a[0]==="bas"?"rotate("+(i*37)+"deg)":"";d.style.opacity=1},1800)});
+    p.appendChild(d);
+  });
+  var tabs=document.querySelectorAll(".tab");
+  tabs.forEach(function(b){b.addEventListener("click",function(){
+    tabs.forEach(function(x){x.setAttribute("aria-selected",x===b)});
+    document.querySelectorAll(".panel").forEach(function(pn){pn.classList.toggle("on",pn.id===b.dataset.p)});
+  })});
+  document.getElementById("yr").textContent=new Date().getFullYear();
+  var s=document.getElementById("score");
+  if(s&&"IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+    new IntersectionObserver(function(e,o){
+      if(!e[0].isIntersecting)return;o.disconnect();
+      var t0=performance.now();
+      (function f(t){var q=Math.min((t-t0)/1200,1);s.textContent=(4.6*q).toFixed(1);if(q<1)requestAnimationFrame(f)})(t0);
+    },{threshold:.6}).observe(s);
+  }
+})();
+</script>
+</body>
+</html>
